@@ -693,7 +693,7 @@ export default function Home() {
                 style={{ background: `linear-gradient(90deg, ${C.cyan}, #A78BFA)`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Logify
               </h1>
-              <p className="text-xs" style={{ color: 'rgba(255,255,255,.45)' }}>Messages â†’ .xlsx in seconds</p>
+              <p className="text-xs" style={{ color: 'rgba(255,255,255,.45)' }}>Messages → .xlsx in seconds</p>
             </div>
           </div>
 

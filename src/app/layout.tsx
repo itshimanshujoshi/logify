@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Logify — Slack to .xlsx Timesheet',
-  description: 'Paste your Slack work messages and instantly generate a formatted Excel timesheet. Edit every cell before downloading. Free, no sign-up, no data stored.',
-  keywords: ['timesheet', 'slack', 'excel', 'xlsx', 'work log', 'logify', 'generator'],
+  title: 'Logify — Work Log to .xlsx Timesheet',
+  description: 'Paste your daily work messages and instantly generate a formatted Excel timesheet. Edit every cell before downloading. Free, no sign-up, no data stored.',
+  keywords: ['timesheet', 'excel', 'xlsx', 'work log', 'logify', 'generator', 'daily report'],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
