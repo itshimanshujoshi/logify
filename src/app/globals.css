@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F0F4FF;
+    color: #0F0F1A;
+  }
+}
+
+/* ── Keyframes ───────────────────────────────────────────────────────────── */
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(14,165,233,.5), 0 0 20px rgba(14,165,233,.15); }
+  50%       { box-shadow: 0 0 16px rgba(14,165,233,.8), 0 0 40px rgba(14,165,233,.25); }
+}
+
+@keyframes violet-glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(124,58,237,.5), 0 0 20px rgba(124,58,237,.15); }
+  50%       { box-shadow: 0 0 16px rgba(124,58,237,.8), 0 0 40px rgba(124,58,237,.25); }
+}
+
+@keyframes scan-line {
+  0%   { top: -2px; opacity: 0; }
+  5%   { opacity: .8; }
+  95%  { opacity: .8; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes float-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 40px 40px; }
+}
+
+@keyframes progress-fill {
+  0%   { width: 0%; }
+  60%  { width: 75%; }
+  100% { width: 100%; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Utility classes ─────────────────────────────────────────────────────── */
+
+.animate-glow-pulse  { animation: glow-pulse 2.2s ease-in-out infinite; }
+.animate-float-up    { animation: float-up .4s ease-out both; }
+.animate-fade-in     { animation: fade-in .3s ease-out both; }
+.animate-spin        { animation: spin .8s linear infinite; }
+
+.app-grid-bg {
+  background-image:
+    linear-gradient(rgba(124,58,237,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-drift 14s linear infinite;
+  background-color: #F0F4FF;
+}
+
+.scan-active {
+  animation: scan-line 3s linear infinite;
+}
+
+.progress-bar {
+  animation: progress-fill 1.6s ease-out forwards;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #E0E7FF transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar       { width: 5px; height: 5px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: #C7D2FE; border-radius: 3px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #A5B4FC; }
+}
